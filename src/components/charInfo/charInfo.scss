@@ -20,7 +20,7 @@
     &__basics {
         display: grid;
         grid-template-columns: 150px auto;
-        column-gap: 25px;
+        column-gap: 15px;
         img {
             width: 150px;
             height: 150px;
@@ -65,32 +65,30 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
     .char__info{
-        max-width: 405px;
+        padding: 10px;
     }
 }
 
-@media (max-width: 576px) {
-    .char__info{
-        max-width: 510px;
-        .char__info-name{
-            font-size: 30px;
+@media (max-width: 768px) {
+    .char {
+       
+        &__basics {
+            grid-template-columns: none;
+            grid-template-rows: auto;
+            place-items: center;
+            text-align: center; 
+            
         }
-        .char__descr{
-            font-size: 28px;
-            line-height: 30px;
-        }
-        .char__comics{
-            font-size: 28px;
-            line-height: 30px;
-        }
-        .char__comics-item{
-            display: flex;
-            font-size: 25px;
-            height: 65px;
-            align-items: center
-
+        &__btns {
+           
+            margin-top: 5px;
+            
         }
     }
 }
+
+
+
+

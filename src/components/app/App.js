@@ -3,8 +3,8 @@ import{BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import AppHeader from "../appHeader/AppHeader";
 import Spinner from '../spinner/Spinner';
 const Page404 = lazy(() => import('../pages/404'));
-const MainPage = lazy(() => import('../pages/MainPage'));
-const ComicsPage = lazy(() => import('../pages/ComicsPage'));
+const MainPage = lazy(() => import('../pages/MainPage/MainPage'));
+const ComicsPage = lazy(() => import('../pages/ComicsPage/ComicsPage'));
 const SinglePage = lazy(() => import('../pages/SinglePage'))
 const SingleCharacter = lazy(() => import('../pages/singleCharacterLayout/SingleCharacter'))
 const SingleComic = lazy(() => import('../pages/singleComicLayout/SingleComic'))

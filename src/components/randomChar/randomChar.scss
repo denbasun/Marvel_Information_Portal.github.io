@@ -5,6 +5,7 @@
     grid-template-columns: repeat(2, 50%);
     align-items: center;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    
     &__block {
         padding: 40px 35px;
         display: grid;
@@ -17,18 +18,21 @@
         object-fit: cover;
     }
     &__info {
+        overflow: hidden;
         display: grid;
-        grid-template-rows: minmax(29px, auto) 90px 38px;
+        grid-template-rows: 50px 70px 38px;
         row-gap: 10px;
         padding-top: 3px;
     }
     &__name {
+        overflow: hidden;
         font-weight: bold;
         font-size: 22px;
         line-height: 29px;
         text-transform: uppercase;
     }
     &__descr {
+        overflow: hidden;
         font-size: 14px;
         line-height: 18px;
     }
@@ -38,6 +42,7 @@
         }
     }
     &__static {
+        height: 100%;
         padding: 40px 35px;
         background-color: $dark;
         position: relative;
@@ -45,7 +50,7 @@
             margin-top: 13px;
         }
     }
-    &__title {
+    &__title, &__title_two {
         font-weight: bold;
         font-size: 24px;
         line-height: 32px;
@@ -58,52 +63,101 @@
     &__decoration {
         position: absolute;
         bottom: 14px;
-        right: -37px;
+        right: 5px;
     }
 }
 
 @media (max-width: 1200px) {
-    // .randomchar{
-    //     &__img{
-    //         left: 345px
-    //     }
-    // }
-    .randomchar__decoration{
-        left: 335px
+    .randomchar{
+        &__block {
+            padding: 10px 8px;
+            column-gap: 10px;
+        }
+        &__static {
+            padding: 10px 5px;
+        }
+        &__btns {
+            a:nth-child(1) {
+                margin-right: 10px;
+            }
+        }
+        &__decoration {
+            width: 180px;
+            position: absolute;
+            bottom: 14px;
+            right: 1px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .randomchar{
+        &__decoration {
+            width: 140px;
+            position: absolute;
+            bottom: 14px;
+            right: 15px;
+        }
+    }
+    
+}
+
+@media (max-width: 885px) {
+    .randomchar{
+        &__decoration {
+            width: 140px;
+            right: 20px;
+        }
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .randomchar{
+        position: relative;
+        &__block {
+            grid-template-columns: none;
+            grid-template-rows: 180px auto;
+            place-items: center;
+            text-align: center;
+        }
+        &__static button{
+            position: absolute;
+            bottom: 10px;
+        }
+        &__decoration{
+            overflow: hidden;
+            width: 235px; 
+        }
     }
 }
 
 @media (max-width: 576px) {
     .randomchar{
-        height: 320px;
-        .randomchar__block{
-            padding: 10px 10px;
-            height: 320px;
-            .randomchar__info{
-                grid-template-rows: 60px 150px 60px;
-            }
-    
-        }
-        .randomchar__static{
-            padding: 10px 10px;
-            height: 320px;
-            
-        }
-        .randomchar__name{
-            font-size: 28px;
-            line-height: 30px;
+        &__decoration{
             overflow: hidden;
-        }
-        .randomchar__descr{
-            font-size: 28px;
-            line-height: 30px;
-            overflow: hidden;
-        }
-        .randomchar__title{
-            font-size: 28px;
-            // margin-bottom: 5px;
-            margin-top: 62px;
+            width: 150px;
+            right: 1px
         }
     }
-   
 }
+
+@media (max-width: 400px) {
+    .randomchar{
+        grid-template-columns: repeat(1, 100%);
+        justify-content: center;
+        text-align: center;
+        &__decoration {
+            display: none;
+        }
+        &__static button{
+            margin-top: 50px;
+            position: relative;
+        }
+    }
+}
+
+
+
+
+

@@ -4,7 +4,7 @@
 .single-comic {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 293px 550px auto;
+    grid-template-columns: 293px auto auto;
     column-gap: 50px;
     align-items: start;
     &__img {
@@ -35,6 +35,24 @@
         line-height: 24px;
         &:hover {
             color: $main-color;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .single-comic {
+        grid-template-columns: none;
+        grid-template-rows: auto;
+        place-items: center;
+        text-align: center;
+        &__img {
+            width: 243px;
+            height: 400px;
+        }
+        &__back {
+            margin-top: 20px;
+            justify-self: center;
+           
         }
     }
 }

@@ -1,7 +1,9 @@
 @import './variables';
 
 .button {
-    min-width: 101px;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 100px;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -11,6 +13,7 @@
     background-color: transparent;
     cursor: pointer;
     &__long {
+        margin-right: 0px;
         display: block;
         width: 170px;
         margin: 45px auto 0 auto;
@@ -48,6 +51,7 @@
         }
     }
     &__main, &__secondary {
+        
         &:hover {
             color: #fff;
         }
@@ -93,11 +97,16 @@
     }
 }
 
-@media (max-width: 576px) {
-    .inner{
-        height: 40px;
-        // width: 130px;
-        // margin-right: 10px;
+@media (max-width: 900px) {
+    .button{
+        width: 77px;
+        .inner{
+            font-size: 12px;
+            padding: 0px 0px;
+        }
+        &__long {
+            
+            width: 170px;
+        }
     }
-    
 }

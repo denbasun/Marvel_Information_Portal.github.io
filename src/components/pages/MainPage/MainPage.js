@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import RandomChar from "../randomChar/RandomChar";
-import CharList from "../charList/CharList";
-import CharInfo from "../charInfo/CharInfo";
-import ErrorBoundary from '../errorBoundary/ErrorBoundary';
-import decoration from '../../resources/img/vision.png';
-import FindChar from '../findChar/FindChar'
+import RandomChar from "../../randomChar/RandomChar";
+import CharList from "../../charList/CharList";
+import CharInfo from "../../charInfo/CharInfo";
+import ErrorBoundary from '../../errorBoundary/ErrorBoundary';
+import decoration from '../../../resources/img/vision.png';
+import FindChar from '../../findChar/FindChar'
 import {Helmet} from 'react-helmet'
+import './MainPage.scss';
 
 const MainPage = () =>{
     const[selectedChar, setChar] = useState(null)

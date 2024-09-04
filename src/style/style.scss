@@ -48,13 +48,13 @@ input::-webkit-inner-spin-button {
 }
 
 .app {
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 50px 0 50px 0;
     position: relative;
     .bg-decoration {
         position: absolute;
-        right: -14px;
+        right: -10px;
         bottom: -70px;
         z-index: -1;
     }
@@ -82,7 +82,11 @@ main {
 }
 
 @media (max-width: 1200px) {
-    .app{
-        padding: 50px 10px 50px 10px;
+    .app {
+        .bg-decoration {
+            width: 400px;
+            right: 10px;
+        }
     }
 }
+
